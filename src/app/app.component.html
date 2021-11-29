@@ -1,3 +1,10 @@
 <h1 *ngFor="let p of tabPrenoms">bonjour {{ p }}</h1>
 
-<h2>{{ roger.name }} , {{ roger.birthDate }}</h2>
+<h2>{{ roger.name }} {{ roger.birthDate | date: "dd/MM/yyyy" }}</h2>
+<h2>{{ ruben.name }} {{ ruben.birthDate | date: "dd/MM/yyyy" }}</h2>
+
+<h2 *ngFor="let p of tabPersons">
+  {{ p.name }} {{ p.birthDate | date: "dd/MM/yyyy" }}
+</h2>
+
+<app-miniature-person></app-miniature-person>
