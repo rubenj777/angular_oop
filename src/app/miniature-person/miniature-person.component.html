@@ -1,3 +1,10 @@
-<div *ngFor="let n of tabName">
-  {{ n }}
+<!-- <div *ngFor="let n of tabName">
+  {{ n.name }}, {{ n.birthDate | date: "dd MM yyyy" }}
+</div> -->
+
+<div>
+  <h2>
+    {{ person.name }}
+  </h2>
+  <p>né le {{ person.birthDate | date: "dd/MM/yyyy" }}</p>
 </div>

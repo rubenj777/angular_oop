@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Person } from '../models/person';
 
 @Component({
   selector: 'app-miniature-person',
@@ -6,11 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./miniature-person.component.css'],
 })
 export class MiniaturePersonComponent implements OnInit {
-  tabName: string[] = [];
-  constructor() {
-    this.tabName.push('Ruben , 25.08.1997');
-    this.tabName.push('Georges , 26.07.1655');
-  }
+  @Input() public person!: Person;
+
+  constructor() {}
 
   ngOnInit(): void {}
 }
