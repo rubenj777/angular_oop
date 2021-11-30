@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Person } from '../models/person';
 
 @Component({
@@ -8,8 +9,13 @@ import { Person } from '../models/person';
 })
 export class MiniaturePersonComponent implements OnInit {
   @Input() public person!: Person;
+  @Output() deletePerson = new EventEmitter<void>();
 
   constructor() {}
+
+  delete() {
+    this.deletePerson.emit();
+  }
 
   ngOnInit(): void {}
 }

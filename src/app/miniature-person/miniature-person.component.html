@@ -6,5 +6,6 @@
   <h2>
     {{ person.name }}
   </h2>
-  <p>né le {{ person.birthDate | date: "dd/MM/yyyy" }}</p>
+  <p>born {{ person.birthDate | date: "MMM d, y" }}</p>
+  <button (click)="delete()">Delete</button>
 </div>

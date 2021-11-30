@@ -8,9 +8,12 @@
   </head>
   <body>
     <div class="list">
-      <app-miniature-person [person]="ruben"></app-miniature-person>
-      <app-miniature-person [person]="roger"></app-miniature-person>
-      <app-miniature-person [person]="jean"></app-miniature-person>
+      <div *ngFor="let p of tabPerson">
+        <app-miniature-person
+          [person]="p"
+          (deletePerson)="delete(p)"
+        ></app-miniature-person>
+      </div>
     </div>
   </body>
 </html>
