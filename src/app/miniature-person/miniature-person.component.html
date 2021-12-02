@@ -1,11 +1,17 @@
-<!-- <div *ngFor="let n of tabName">
-  {{ n.name }}, {{ n.birthDate | date: "dd MM yyyy" }}
-</div> -->
-
-<div>
+<div id="person">
   <h2>
     {{ person.name }}
   </h2>
   <p>born {{ person.birthDate | date: "MMM d, y" }}</p>
-  <button (click)="delete()">Delete</button>
+  <div id="btn">
+    <div *ngIf="this.person.major">
+      <div id="major">Major</div>
+    </div>
+    <div *ngIf="!this.person.major">
+      <div id="minor">Minor</div>
+    </div>
+    <!-- <ng-template #thenBlock>Major</ng-template>
+  <ng-template #elseBlock>Minor</ng-template> -->
+    <button (click)="delete()">Delete</button>
+  </div>
 </div>

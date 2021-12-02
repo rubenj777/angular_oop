@@ -7,6 +7,17 @@
     <title>Document</title>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li class="active">
+          <a routerLink="/page1" routerLinkActive="active">Page 1</a>
+        </li>
+        <li>
+          <a routerLink="/page2" routerLinkActive="active">Page 2</a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="list">
       <div *ngFor="let p of tabPerson">
         <app-miniature-person
@@ -15,5 +26,7 @@
         ></app-miniature-person>
       </div>
     </div>
+
+    <router-outlet></router-outlet>
   </body>
 </html>

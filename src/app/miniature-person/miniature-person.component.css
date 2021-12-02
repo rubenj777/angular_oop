@@ -2,11 +2,41 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-div {
+#person {
   width: 200px;
   color: white;
   padding: 10px;
   margin: 10px;
-  background-color: rgb(149, 149, 190);
+  background-color: rgb(150, 150, 190);
   border-radius: 8px;
+}
+
+h2 {
+  margin: 0;
+}
+
+#minor,
+#major {
+  display: flex;
+  width: 55px;
+  height: 25px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+#major {
+  background-color: rgb(80, 200, 80);
+}
+
+#minor {
+  background-color: rgb(230, 70, 70);
+}
+
+#btn {
+  display: flex;
+}
+
+button {
+  margin-left: 50%;
 }
