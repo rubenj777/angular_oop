@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li class="active">
-          <a routerLink="/page1" routerLinkActive="active">Page 1</a>
-        </li>
-        <li>
-          <a routerLink="/page2" routerLinkActive="active">Page 2</a>
-        </li>
-      </ul>
-    </nav>
+<nav>
+  <ul>
+    <li class="active">
+      <a routerLink="/page1" routerLinkActive="active">Page 1</a>
+    </li>
+    <li>
+      <a routerLink="/page2" routerLinkActive="active">Page 2</a>
+    </li>
+  </ul>
+</nav>
 
-    <div class="list">
-      <div *ngFor="let p of tabPerson">
-        <app-miniature-person
-          [person]="p"
-          (deletePerson)="delete(p)"
-        ></app-miniature-person>
-      </div>
-    </div>
+<div class="list">
+  <div *ngFor="let p of tabPerson">
+    <app-miniature-person
+      [person]="p"
+      (deletePerson)="delete(p)"
+    ></app-miniature-person>
+  </div>
+</div>
 
-    <router-outlet></router-outlet>
-  </body>
-</html>
+<router-outlet></router-outlet>
